@@ -3988,7 +3988,8 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   /* color: #f4623a; */
-  color: rgb(37, 150, 190);
+  /* color: rgb(37, 150, 190); */
+  color: orange;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -11402,11 +11403,13 @@ hr.divider-light {
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
   /* color: #f4623a; */
-  color: rgb(37, 150, 190);
+  /* color: rgb(37, 150, 190); */
+  color: orange;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
   /* color: #f4623a !important; */
-  color: rgb(37, 150, 190) !important;
+  /* color: rgb(37, 150, 190) !important; */
+  color: orange !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -11439,14 +11442,16 @@ hr.divider-light {
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
     /* color: #f4623a; */
-    color: rgb(37, 150, 190);
+    /* color: rgb(37, 150, 190); */
+    color: orange;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
     /* color: #f4623a; */
-    color: rgb(37, 150, 190);
+    /* color: rgb(37, 150, 190); */
+    color: orange;
   }
 }
 
