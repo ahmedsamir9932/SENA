@@ -11517,6 +11517,17 @@ header.masthead h1, header.masthead .h1 {
     font-size: 3.5rem;
   }
 }
+.dropdown-menu {
+  background-color: rgb(0, 0, 0);
+}
+.dropdown-item {
+  color: orange;
+  font-size: 17px;
+  font-weight: 700;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
