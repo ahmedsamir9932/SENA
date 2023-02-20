@@ -51,6 +51,24 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:3,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:6000,
+        autoplayHoverPause:true
+    });
+    $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[1000])
+    })
+    $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
+
     // var myCarousel = document.querySelector('#carouselExampleIndicators')
     // var carousel = new bootstrap.Carousel(myCarousel, {
     //   interval: 500,

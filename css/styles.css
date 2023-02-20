@@ -44,7 +44,8 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   /* --bs-primary-rgb: 244, 98, 58; */
-  --bs-primary-rgb: 37, 150, 190;
+  /* --bs-primary-rgb: 37, 150, 190; */
+  --bs-primary-rgb: 255, 165, 0;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -11354,7 +11355,8 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0 2rem 0;
+  /* padding: 8rem 0 2rem 0; */
+  padding: 4rem 0 2rem 0;
 }
 
 .text-white-75 {
@@ -11375,7 +11377,8 @@ hr.divider {
   max-width: 3.25rem;
   margin: 1.5rem auto;
   /* background-color: #f4623a; */
-  background-color: rgb(37, 150, 190);
+  /* background-color: rgb(37, 150, 190); */
+  background-color: orange;
   opacity: 1;
 }
 
@@ -11458,7 +11461,7 @@ hr.divider-light {
 .carousel-item img {
   height: 100vh !important;
   filter: brightness(0.50);
-  animation: scaleAnimate 4s alternate ease-in infinite backwards;
+  animation: scaleAnimate 6s alternate ease-in infinite backwards;
 }
 
 @keyframes scaleAnimate {
@@ -11740,3 +11743,69 @@ header.masthead h1, header.masthead .h1 {
   transform: translateX(-50%);
 }
 
+
+
+.owl-carousel .owl-box {
+  margin: 6px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.owl-carousel .owl-box img {
+  height: 250px;
+  border-radius: 6px;
+}
+.owl-carousel .owl-box h3 {
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+.owl-carousel .owl-box p {
+  height: 250px;
+  padding: 0 15px;
+}
+
+.title-primary {
+  position: relative;
+  display: inline-block;
+}
+.title-primary::before {
+  content: "";
+    position: absolute;
+    top: 45%;
+    left: -5rem;
+    width: 64px;
+    height: 4px;
+    background-color: #fff;
+}
+.title-primary::after {
+  content: "";
+    position: absolute;
+    top: 45%;
+    right: -5rem;
+    width: 64px;
+    height: 4px;
+    background-color: #fff;
+}
+.title-secondary {
+  position: relative;
+  display: inline-block;
+}
+.title-secondary::before {
+  content: "";
+    position: absolute;
+    top: 45%;
+    left: -5rem;
+    width: 64px;
+    height: 4px;
+    background-color: orange;
+}
+.title-secondary::after {
+  content: "";
+    position: absolute;
+    top: 45%;
+    right: -5rem;
+    width: 64px;
+    height: 4px;
+    background-color: orange;
+}
