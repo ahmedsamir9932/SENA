@@ -2690,8 +2690,8 @@ textarea.form-control-lg {
 .form-floating > label {
   position: absolute;
   top: 0;
-  /* left: 0; */
-  right: 0;
+  left: 0;
+  /* right: 0; */
   height: 100%;
   padding: 1rem 0.75rem;
   pointer-events: none;
@@ -11568,7 +11568,9 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
-
+svg {
+  font-size: 20px;
+}
 .facebook-link i {
   transition: 0.3s;
   color: var(--bs-body-color);
@@ -11934,4 +11936,37 @@ header.masthead h1, header.masthead .h1 {
 
 .padding-30 {
   padding: 30px 0px;
+}
+.o-color {
+  color: orange !important;
+}
+.o-bg {
+  background-color: orange;
+}
+.icon-o-color {
+  color: orange;
+  margin-right: 10px;
+  font-size: 30px;
+}
+.footer {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../assets/images/footer-bg.jpg');
+  background-size: cover;
+}
+.footer-icon a {
+  text-decoration: none;
+}
+.footer-icon a i.bi-facebook {
+  color: #3b5a9a;
+}
+.footer-icon a i.bi-twitter {
+  color: #1aa9e1;
+}
+.footer-icon a i.bi-linkedin {
+  color: #0073b2;
+}
+.footer h4 {
+  margin-bottom: 30px;
+}
+.footer p {
+  font-weight: 400;
 }

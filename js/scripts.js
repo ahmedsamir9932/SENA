@@ -75,85 +75,85 @@ window.addEventListener('DOMContentLoaded', event => {
     //   pasue: false
     // })
 
-    // var inputName = document.getElementById('name');
-    // var inputEmail = document.getElementById('email');
-    // var inputMessage = document.getElementById('message');
-    // var btn = document.getElementById('my-form-button');
+    var inputName = document.getElementById('name');
+    var inputEmail = document.getElementById('email');
+    var inputMessage = document.getElementById('message');
+    var btn = document.getElementById('my-form-button');
 
-    // // inputName.addEventListener('keyup', checkValid);
-    // inputName.addEventListener('input', checkValid);
+    // inputName.addEventListener('keyup', checkValid);
+    inputName.addEventListener('input', checkValid);
 
-    // // inputEmail.addEventListener('keyup', checkValid);
-    // inputEmail.addEventListener('input', checkValid);
+    // inputEmail.addEventListener('keyup', checkValid);
+    inputEmail.addEventListener('input', checkValid);
 
-    // // inputMessage.addEventListener('keyup', checkValid);
-    // inputMessage.addEventListener('input', checkValid);
+    // inputMessage.addEventListener('keyup', checkValid);
+    inputMessage.addEventListener('input', checkValid);
 
-    // function checkValid() {
-    //     if(inputName.value == "" || inputEmail.value == "" || inputMessage.value == "") {
-    //         btn.setAttribute('disabled', true)
-    //     } else {
-    //         btn.removeAttribute('disabled')
-    //     }
-    // }
+    function checkValid() {
+        if(inputName.value == "" || inputEmail.value == "" || inputMessage.value == "") {
+            btn.setAttribute('disabled', true)
+        } else {
+            btn.removeAttribute('disabled')
+        }
+    }
 
 
 
-    // var form = document.getElementById("my-form");
+    var form = document.getElementById("my-form");
             
-    // async function handleSubmit(event) {
-    //     event.preventDefault();
-    //     var status = document.getElementById("my-form-status");
-    //     var data = new FormData(event.target);
-    //     fetch(event.target.action, {
-    //     method: form.method,
-    //     body: data,
-    //     headers: {
-    //         'Accept': 'application/json'
-    //     }
-    //     }).then(response => {
-    //     if (response.ok) {
-    //         status.innerHTML = "تم ارسال الرسالة بنجاح";
-    //         status.classList.add('alert', 'alert-success');
-    //         setTimeout(() => {
-    //             status.innerHTML = '';
-    //             status.classList.remove('alert', 'alert-success')
-    //         }, 5000);
-    //         form.reset();
-    //         btn.setAttribute('disabled', true)
-    //     } else {
-    //         response.json().then(data => {
-    //         if (Object.hasOwn(data, 'errors')) {
-    //             status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-    //             status.classList.add('alert', 'alert-danger');
-    //             setTimeout(() => {
-    //             status.innerHTML = '';  
-    //             status.classList.remove('alert', 'alert-danger')
-    //         }, 5000);
-    //             form.reset();
-    //             btn.setAttribute('disabled', true);
-    //         } else {
-    //             status.innerHTML = "حدث خطا برجاء المحاولة مرة اخري";
-    //             status.classList.add('alert', 'alert-danger');
-    //             setTimeout(() => {
-    //             status.innerHTML = '';  
-    //             status.classList.remove('alert', 'alert-danger')
-    //         }, 5000);
-    //             form.reset();
-    //             btn.setAttribute('disabled', true)
-    //         }
-    //         })
-    //     }
-    //     }).catch(error => {
-    //     status.innerHTML = "حدث خطا برجاء المحاولة مرة اخري";
-    //     status.classList.add('alert', 'alert-danger');
-    //     setTimeout(() => {
-    //         status.innerHTML = '';
-    //         status.classList.remove('alert', 'alert-danger')
-    //         }, 5000);
-    //     form.reset();
-    //     btn.setAttribute('disabled', true)
-    //     });
-    // }
-    // form.addEventListener("submit", handleSubmit)
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+        }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Message has been sent successfully";
+            status.classList.add('alert', 'alert-success');
+            setTimeout(() => {
+                status.innerHTML = '';
+                status.classList.remove('alert', 'alert-success')
+            }, 5000);
+            form.reset();
+            btn.setAttribute('disabled', true)
+        } else {
+            response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                status.classList.add('alert', 'alert-danger');
+                setTimeout(() => {
+                status.innerHTML = '';  
+                status.classList.remove('alert', 'alert-danger')
+            }, 5000);
+                form.reset();
+                btn.setAttribute('disabled', true);
+            } else {
+                status.innerHTML = "Something went wrong, please try again later";
+                status.classList.add('alert', 'alert-danger');
+                setTimeout(() => {
+                status.innerHTML = '';  
+                status.classList.remove('alert', 'alert-danger')
+            }, 5000);
+                form.reset();
+                btn.setAttribute('disabled', true)
+            }
+            })
+        }
+        }).catch(error => {
+        status.innerHTML = "Something went wrong, please try again later";
+        status.classList.add('alert', 'alert-danger');
+        setTimeout(() => {
+            status.innerHTML = '';
+            status.classList.remove('alert', 'alert-danger')
+            }, 5000);
+        form.reset();
+        btn.setAttribute('disabled', true)
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
 });
