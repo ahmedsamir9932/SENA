@@ -75,6 +75,21 @@ window.addEventListener('DOMContentLoaded', event => {
     //   pasue: false
     // })
 
+//     var wow = new WOW();
+//     console.log(wow);
+//     // Helper function for add element box list in WOW
+//   WOW.prototype.addBox = function(element) {
+//     this.boxes.push(element);
+//   };
+//   wow.init();
+//     $('.wow').on('scrollSpy:exit', function() {
+//         $(this).css({
+//           'visibility': 'hidden',
+//           'animation-name': 'none'
+//         }).removeClass('animated');
+//         wow.addBox(this);
+//       }).scrollSpy();
+
     var inputName = document.getElementById('name');
     var inputEmail = document.getElementById('email');
     var inputMessage = document.getElementById('message');
