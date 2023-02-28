@@ -57,18 +57,32 @@ window.addEventListener('DOMContentLoaded', event => {
     owl.owlCarousel({
         items:3,
         loop:true,
+        nav: true,
         margin:10,
         autoplay:true,
         autoplayTimeout:6000,
-        autoplayHoverPause:true
+        autoplayHoverPause:false,
+        responsive: {
+            0 : {
+                items : 1,
+            },
+            576: {
+                items : 1,
+            },
+            768: {
+                items : 2,
+            },
+            992: {
+                items: 3
+            }
+        }
     });
     $('.play').on('click',function(){
         owl.trigger('play.owl.autoplay',[1000])
     })
     $('.stop').on('click',function(){
         owl.trigger('stop.owl.autoplay')
-    })
-
+    });
     // var myCarousel = document.querySelector('#carouselExampleIndicators')
     // var carousel = new bootstrap.Carousel(myCarousel, {
     //   interval: 500,
@@ -171,4 +185,26 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
     form.addEventListener("submit", handleSubmit)
+
+
+    
+    let silde1 = document.getElementById('slide1');
+    let silde2 = document.getElementById('slide2');
+    let silde3 = document.getElementById('slide3');
+    let silde4 = document.getElementById('slide4');
+    let silde5 = document.getElementById('slide5');
+    silde1.addEventListener('click', openAccordion.bind(null, 'fleet-1', 'collapseOne'));
+    silde2.addEventListener('click', openAccordion.bind(null, 'fleet-2', 'collapseTwo'));
+    silde3.addEventListener('click', openAccordion.bind(null, 'fleet-3', 'collapseThree'));
+    silde4.addEventListener('click', openAccordion.bind(null, 'fleet-4', 'collapseFour'));
+    silde5.addEventListener('click', openAccordion.bind(null, 'fleet-5', 'collapseFive'));
+    function openAccordion(btnClass, accId) {
+        let btn = document.getElementById(btnClass);
+        let acc = document.getElementById(accId);
+        btn.classList.remove('collapsed');
+        acc.classList.add('show');
+        setTimeout(() => {
+            window.scroll({top: acc.offsetTop - 170});
+        }, 300)
+    }
 });
