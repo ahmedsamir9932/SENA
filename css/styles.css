@@ -12698,4 +12698,10 @@ input:focus-visible {
   .fleet-image img {
     width: 100%;
   }
+  .service-title {
+    margin-top: 15px;
+  }
+  .service-image {
+    margin-top: 15px;
+  }
 }
