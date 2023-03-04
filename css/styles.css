@@ -11734,11 +11734,11 @@ body {
 }
 
 .page-section.split {
-  padding: 10rem 0 6rem 0;
+  padding: 12rem 0 6rem 0;
 }
 
 .page-section {
-  padding: 4rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
 }
 
 .text-white-75 {
@@ -11843,6 +11843,15 @@ hr.divider-light {
     /* color: rgb(37, 150, 190); */
     color: orange;
   }
+  #mainNav.navbar-shrink .navbar-brand .logo-text {
+    color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover  .logo-text {
+    /* color: #f4623a; */
+    /* color: rgb(37, 150, 190); */
+    color: orange;
+  }
+  
 }
 
 .carousel-item img {
@@ -12735,8 +12744,18 @@ input:focus-visible {
 }
 
 .logo-text {
-  font-family: 'Dancing Script' !important;
-  font-weight: 500 !important;
+  font-weight: bold !important;
   font-size: 15px;
-  color: #63c6db;
+  color: orange;
+  transition: all 0.3s;
+}
+.navbar-brand:hover .logo-text {
+  color: #fff;
+}
+
+.split .logo-text {
+  color: #000;
+}
+.split .navbar-brand:hover .logo-text {
+  color: orange;
 }
