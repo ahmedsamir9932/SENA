@@ -12636,16 +12636,18 @@ input:focus-visible {
 }
 .downloads-cert {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  margin-top: 15px;
 }
 .downloads-cert img {
   height: 300px;
 }
 .downloads-cert .card-text {
-  height: 170px;
+  /* height: 170px; */
 }
 
 #fleet .owl-carousel .owl-box p {
-  height: 50px;
+  height: 110px;
 }
 
 .see-details {
@@ -12730,4 +12732,11 @@ input:focus-visible {
     font-size: 16px;
     font-weight: bold;
   }
+}
+
+.logo-text {
+  font-family: 'Dancing Script' !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  color: #63c6db;
 }
