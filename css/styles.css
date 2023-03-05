@@ -11846,12 +11846,11 @@ hr.divider-light {
   #mainNav.navbar-shrink .navbar-brand .logo-text {
     color: #212529;
   }
-  #mainNav.navbar-shrink .navbar-brand:hover  .logo-text {
+  #mainNav.navbar-shrink .navbar-brand:hover .logo-text {
     /* color: #f4623a; */
     /* color: rgb(37, 150, 190); */
     color: orange;
   }
-  
 }
 
 .carousel-item img {
@@ -12660,17 +12659,17 @@ input:focus-visible {
 }
 
 .see-details {
-   color: #000;
-   display: block;
-   padding: 15px 15px;
-   font-size: 18px;
-   transition: all .3s;
+  color: #000;
+  display: block;
+  padding: 15px 15px;
+  font-size: 18px;
+  transition: all 0.3s;
 }
 .see-details i {
   margin: 0 5px;
 }
 .see-details:hover {
-   color: orange;
+  color: orange;
 }
 
 /* large tablet  */
